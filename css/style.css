@@ -12,3 +12,27 @@
 .bodycontain {
   margin-top: 120px;
 }
+
+
+.main {
+  background: url('images/home-main-bg.jpg');
+
+}
+
+.thisyear {
+  background-color: #fed389;
+  color: ;
+}
+
+.saying {
+  background: url('images/home-saying-bg.png');
+  background-color: #19adac;
+}
+
+.tribe {
+
+}
+
+.donate {
+  background-color: #ef5123;
+}
