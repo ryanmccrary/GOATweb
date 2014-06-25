@@ -1,1 +1,14 @@
-#
+
+
+.navbar-default {
+  background: #fff;
+  border: none;
+}
+
+.navbar-brand {
+  font-family: "brandon-grotesque",sans-serif;
+}
+
+.bodycontain {
+  margin-top: 120px;
+}
