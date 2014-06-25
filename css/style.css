@@ -1,4 +1,7 @@
 
+.nopad {
+  padding: 0;
+}
 
 .navbar-default {
   background: #fff;
@@ -8,6 +11,8 @@
 .navbar-brand {
   font-family: "brandon-grotesque",sans-serif;
   font-weight: 900;
+  font-size: 50px;
+  color: #ef5123;
 }
 
 .bodycontain {
@@ -16,9 +21,11 @@
 
 
 .main {
-  background: url('images/home-main-bg.jpg');
-
+  background-image: url('../images/home-main-bg.jpg');
+  background-size: 100% auto;
+  max-height: 400px;
 }
+
 
 .thisyear {
   background-color: #fed389;
@@ -26,7 +33,7 @@
 }
 
 .saying {
-  background: url('images/home-saying-bg.png');
+  background: url('../images/home-saying-bg.png');
   background-color: #19adac;
 }
 
