@@ -9,10 +9,16 @@
 }
 
 .navbar-default .navbar-brand {
+  color: #ef5123;
   font-family: "brandon-grotesque",sans-serif;
   font-weight: 900;
   font-size: 50px;
-  color: #ef5123;
+}
+
+.navbar-brand-second {
+  color: #19adac;
+  font-family: "din-condensed-web",sans-serif;
+  font-size: 20px;
 }
 
 .bodycontain {
