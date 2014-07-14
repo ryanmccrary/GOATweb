@@ -1,0 +1,50 @@
+.navbar {
+  background: #fff;
+  border: none;
+
+
+  .navbar-brand {
+    &, &:hover {
+      font-family: @brandon;
+      font-size: 70px;
+      font-weight: 800;
+      color: @goatred;
+      display: inline-block;
+      float: none;
+    }
+  }
+
+  .tagline {
+    font-family: @din;
+    color: @goatteal;
+    font-size: 28px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 10px;
+
+    span {
+      white-space: nowrap;
+      display: block;
+    }
+  }
+
+  .navbar-right {
+    font-family: @din;
+    text-transform: uppercase;
+    font-size: 22px;
+  }
+
+  .navbar-nav { 
+    margin-top: 17px;
+
+    > li {
+      float: none;
+      display: inline-block;
+      vertical-align: middle;
+
+      a {
+        color: @goatbrown;
+      }
+    }
+  }
+}
