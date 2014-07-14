@@ -1,0 +1,13 @@
+{
+  "name": "relay-living-blog",
+  "version": "1.0.0",
+  "description": "Relay Foods Blog",
+  "private": true,
+  "dependencies": {
+    "grunt-cli": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-watch": "latest"
+  }
+}
