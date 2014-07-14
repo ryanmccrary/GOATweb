@@ -19,6 +19,15 @@
   color: #19adac;
   font-family: "din-condensed-web",sans-serif;
   font-size: 20px;
+  line-height: 1.04;
+  margin-top: 4px;
+  text-transform: uppercase;
+  width: 337px;
+}
+
+.brownav {
+  color: #654738;
+  font-family: "din-condensed-web",sans-serif;
 }
 
 .bodycontain {
