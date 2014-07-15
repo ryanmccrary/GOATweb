@@ -39,6 +39,72 @@
   }
 }
 
+.row-2 {
+  height: 390px;
+  display: table;
+  width: 100%;
+  display: inline-block; 
+  display: table;
+
+  @media (max-width: 767px) {
+    height: auto;
+  }
+
+  .box {
+    height: 100%;
+    width: 33.33%;
+    background: @goatred;
+    display: inline-block;
+    float: left;
+    height: 390px;
+    text-align: center;
+    padding: 65px 65px 0;
+    color: #ffffff;
+
+    @media (max-width: 767px) {
+            width: 50%;
+          }
+
+      &.tribe {
+        background: @goattan url('../img/home-tribe.jpg') no-repeat;
+        h4 {
+          text-transform: uppercase;
+          font-size: 24px;
+
+          &, &:hover {
+            
+          }
+        }
+      }
+      &.donate {
+        font-family: @din;
+        display: table-header-group;
+        font-size: 24px;
+        
+        
+        span.headline {
+          text-transform: uppercase;
+          display: block;
+          font-family: @brandon;
+          margin: .5em;
+          font-weight: 700;
+
+        }
+        
+          span.description {
+
+          }
+
+          @media (max-width: 767px) {
+            width: 100%;
+          }
+      }
+      &.blog {
+        background: #000000 url('../img/home-blog.jpg') no-repeat;
+      }
+    }
+}
+
 .swiper-container {
   height: 100%;
   overflow: hidden;
