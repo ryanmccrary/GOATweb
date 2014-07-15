@@ -4,6 +4,7 @@
   border: none;
   position: fixed;
   top: 0;
+  padding: 0 40px;
 }
 .navbar .navbar-brand,
 .navbar .navbar-brand:hover {
@@ -26,12 +27,10 @@
   white-space: nowrap;
   display: block;
 }
-.navbar .navbar-right {
+.navbar .navbar-nav {
   font-family: 'din-condensed-web', sans-serif;
   text-transform: uppercase;
   font-size: 22px;
-}
-.navbar .navbar-nav {
   margin-top: 17px;
 }
 .navbar .navbar-nav > li {
@@ -41,6 +40,12 @@
 }
 .navbar .navbar-nav > li a {
   color: #654738;
+  border-bottom: 3px solid white;
+}
+.navbar .navbar-nav > li a:hover {
+  color: #654738;
+  background: rgba(0, 0, 0, 0.03);
+  border-bottom: 3px solid #654738;
 }
 .container-fluid {
   padding: 0;
@@ -48,9 +53,12 @@
 .container-fluid.main {
   padding-top: 80px;
 }
-.swiper-container {
+.row-1 {
   height: 530px;
-  overflow: auto;
+}
+.swiper-container {
+  height: 100%;
+  overflow: hidden;
 }
 .swiper-slide {
   width: 100%;
@@ -59,14 +67,40 @@
 .swiper-slide h2 {
   text-align: center;
   line-height: 55px;
-  padding-top: 150px;
+  padding-top: 180px;
   color: #fff;
   margin-bottom: 50px;
-  width: 750px;
+  width: 75%;
   margin: 0 auto;
   font-family: "brandon-grotesque", sans-serif;
   font-weight: 600;
   font-size: 40px;
+  z-index: 1;
+  position: relative;
+}
+.swiper-slide h2 a.learn-more {
+  color: #654738;
+  font-family: 'din-condensed-web', sans-serif;
+  font-size: 21px;
+  text-transform: uppercase;
+  background: #fff;
+  padding: 8px 5px 8px 12px;
+  position: relative;
+  white-space: nowrap;
+}
+.swiper-slide h2 a.learn-more:hover {
+  text-decoration: none;
+}
+.swiper-slide h2 a.learn-more:after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  border: 20px solid #fff;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  right: -40px;
+  top: 0;
 }
 .swiper-slide img {
   position: absolute;
@@ -74,24 +108,75 @@
   top: 0;
   width: 100%;
   z-index: -1;
+  height: auto;
+}
+.swiper-slide:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(101, 71, 56, 0.7);
+  z-index: 0;
+  top: 0;
 }
 .boxes {
   width: 315px;
+  height: 100%;
   float: right;
 }
 .boxes .box {
-  height: 315px;
+  height: 50%;
   width: 100%;
   background: #ef5123;
 }
 .boxes .box:first-child {
-  background: #19adac;
+  background: #fed389;
+}
+.boxes .box:first-child h4 {
+  color: #654738;
+}
+.boxes .box:last-child {
+  background: #19adac url('../img/goat.png') no-repeat -35% 131%;
 }
 .boxes .box h4 {
+  font-family: "brandon-grotesque", sans-serif;
   margin-top: 0;
   text-align: center;
-  line-height: 55px;
-  padding-top: 75px;
+  line-height: 80px;
   color: #fff;
   margin-bottom: 50px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.boxes .box h4 span {
+  display: block;
+  white-space: nowrap;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 70%;
+  margin: 0 auto;
+}
+.boxes .box h4 span.number {
+  color: #ef5123;
+  font-family: 'din-condensed-web', sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.boxes .box h4 span.subtext {
+  text-transform: inherit;
+  white-space: inherit;
+  line-height: 24px;
+}
+.boxes .box.what-were-sayin h4 {
+  width: 100%;
+  margin: 20px 0;
+}
+.boxes .box.what-were-sayin .twitter-feed {
+  color: #fff;
+  font-family: 'din-condensed-web', sans-serif;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 18px;
 }

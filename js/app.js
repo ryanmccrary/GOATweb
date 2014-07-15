@@ -8,4 +8,8 @@ $(document).ready(function() {
     loop: true
   });
 
+
+  $('.box h4 span').fitText(1);
+  $(".number").fitText(.2);
+  $('.fittext').fitText(1, { maxFontSize: '40px'});
 });

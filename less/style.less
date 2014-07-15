@@ -2,6 +2,7 @@
 @goatred: #ef5123;
 @goatteal: #19adac;
 @goatbrown: #654738;
+@goattan: #fed389;
 
 // fonts
 @brandon: "brandon-grotesque", sans-serif;
@@ -21,9 +22,13 @@
   }
 }
 
-.swiper-container {
+.row-1 {
   height: 530px;
-  overflow: auto;
+}
+
+.swiper-container {
+  height: 100%;
+  overflow: hidden;
 }
 
 .swiper-slide {
@@ -33,14 +38,43 @@
   h2 {
     text-align: center;
     line-height: 55px;
-    padding-top: 150px;
+    padding-top: 180px;
     color: #fff;
     margin-bottom: 50px;
-    width: 750px;
+    width: 75%;
     margin: 0 auto;
     font-family: @brandon;
     font-weight: 600;
     font-size: 40px;
+    z-index: 1;
+    position: relative;
+
+    a.learn-more {
+      color: @goatbrown;
+      font-family: @din;
+      font-size: 21px;
+      text-transform: uppercase;
+      background: #fff;
+      padding: 8px 5px 8px 12px;
+      position: relative;
+      white-space: nowrap;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        height: 100%;
+        border: 20px solid #fff;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        right: -40px;
+        top: 0;
+      }
+    }
   }
 
   img {
@@ -49,29 +83,91 @@
     top: 0;
     width: 100%;
     z-index: -1;
+    height: auto;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(101, 71, 56, .7); //goatbrown
+    z-index: 0;
+    top: 0;
   }
 }
 
 .boxes {
   width: 315px;
+  height: 100%;
   float: right;
 
   .box {
-    height: 315px;
+    height: 50%;
     width: 100%;
     background: @goatred;
 
     &:first-child {
-      background: @goatteal;
+      background: @goattan;
+
+      h4 {
+        color: @goatbrown;
+      }
+    }
+
+    &:last-child {
+      background: @goatteal url('../img/goat.png') no-repeat -35% 131%;
     }
 
     h4 {
+      font-family: @brandon;
       margin-top: 0;
       text-align: center;
-      line-height: 55px;
-      padding-top: 75px;
+      line-height: 80px;
       color: #fff;
       margin-bottom: 50px;
+      display: inline-block;
+      vertical-align: middle;
+
+      span {
+        display: block;
+        white-space: nowrap;
+        font-weight: 600;
+        text-transform: uppercase;
+        width: 70%;
+        margin: 0 auto;
+
+        &.number {
+          color: @goatred;
+          font-family: @din;
+          font-weight: 700;
+          margin-bottom: 20px;
+        }
+
+        &.subtext {
+          text-transform: inherit;
+          white-space: inherit;
+          line-height: 24px;
+        }
+      }
+    }
+
+    &.what-were-sayin {
+
+      h4 {
+        width: 100%;
+        margin: 20px 0;
+      }
+
+      .twitter-feed {
+        color: #fff;
+        font-family: @din;
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        font-size: 18px;
+      }
     }
   }
 }

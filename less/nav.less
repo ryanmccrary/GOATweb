@@ -3,6 +3,7 @@
   border: none;
   position: fixed;
   top: 0;
+  padding: 0 40px;
 
   .navbar-brand {
     &, &:hover {
@@ -14,7 +15,6 @@
       float: none;
     }
   }
-
   .tagline {
     font-family: @din;
     color: @goatteal;
@@ -29,13 +29,10 @@
     }
   }
 
-  .navbar-right {
+  .navbar-nav {
     font-family: @din;
     text-transform: uppercase;
     font-size: 22px;
-  }
-
-  .navbar-nav {
     margin-top: 17px;
 
     > li {
@@ -45,6 +42,13 @@
 
       a {
         color: @goatbrown;
+        border-bottom: 3px solid white;
+
+        &:hover {
+          color: @goatbrown;
+          background: rgba(0,0,0,.03);
+          border-bottom: 3px solid @goatbrown;
+        }
       }
     }
   }
