@@ -13,6 +13,10 @@
       color: @goatred;
       display: inline-block;
       float: none;
+
+      @media (max-width: 1050px) {
+        margin-top: 15px;
+      }
     }
   }
   .tagline {
@@ -48,6 +52,38 @@
           color: @goatbrown;
           background: rgba(0,0,0,.03);
           border-bottom: 3px solid @goatbrown;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1050px) {
+    padding: 0;
+
+    .navbar-nav {
+      > li {
+        padding: 0;
+      }
+
+      &.navbar-right:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media (max-width: 975px) {
+
+    .navbar-nav {
+      padding: 0;
+      width: 100%;
+      margin-top: 0;
+
+      > li {
+        width: 16%;
+        text-align: center;
+
+        > a {
+          padding: 10px 0;
         }
       }
     }
