@@ -1,37 +1,63 @@
-// variables
+// colors
 @goatred: #ef5123;
 @goatteal: #19adac;
 @goatbrown: #654738;
 
-
+// fonts
 @brandon: "brandon-grotesque", sans-serif;
 @din: 'din-condensed-web', sans-serif;
 
+
+// imports
+@import '../bower_components/swiper/dist/idangerous.swiper.css';
 @import 'nav.less';
 
-.bodycontain {
-  margin-top: 120px;
+
+.container-fluid {
+  padding: 0;
+
+  &.main {
+    padding-top: 80px;
+  }
 }
 
-.main {
-  background: url('images/home-main-bg.jpg');
-
+.swiper-container {
+  height: 530px;
+  overflow: auto;
 }
 
-.thisyear {
-  background-color: #fed389;
-  color: ;
+.swiper-slide {
+  width: 100%;
+  position: relative;
+
+  h2 {
+    text-align: center;
+    line-height: 55px;
+    padding-top: 150px;
+    color: #fff;
+    margin-bottom: 50px;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
 }
 
-.saying {
-  background: url('images/home-saying-bg.png');
-  background-color: #19adac;
-}
+.boxes {
+  width: 315px;
+  float: right;
 
-.tribe {
-  display: none;
-}
+  .box {
+    height: 315px;
+    width: 100%;
+    background: @goatred;
 
-.donate {
-  background-color: #ef5123;
+    &:first-child {
+      background: @goatteal;
+    }
+  }
 }

@@ -1,6 +1,9 @@
+@import '../bower_components/swiper/dist/idangerous.swiper.css';
 .navbar {
   background: #fff;
   border: none;
+  position: fixed;
+  top: 0;
 }
 .navbar .navbar-brand,
 .navbar .navbar-brand:hover {
@@ -39,23 +42,43 @@
 .navbar .navbar-nav > li a {
   color: #654738;
 }
-.bodycontain {
-  margin-top: 120px;
+.container-fluid {
+  padding: 0;
 }
-.main {
-  background: url('images/home-main-bg.jpg');
+.container-fluid.main {
+  padding-top: 80px;
 }
-.thisyear {
-  background-color: #fed389;
-  color: ;
+.swiper-container {
+  height: 530px;
+  overflow: auto;
 }
-.saying {
-  background: url('images/home-saying-bg.png');
-  background-color: #19adac;
+.swiper-slide {
+  width: 100%;
+  position: relative;
 }
-.tribe {
-  display: none;
+.swiper-slide h2 {
+  text-align: center;
+  line-height: 55px;
+  padding-top: 150px;
+  color: #fff;
+  margin-bottom: 50px;
 }
-.donate {
-  background-color: #ef5123;
+.swiper-slide img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+.boxes {
+  width: 315px;
+  float: right;
+}
+.boxes .box {
+  height: 315px;
+  width: 100%;
+  background: #ef5123;
+}
+.boxes .box:first-child {
+  background: #19adac;
 }
