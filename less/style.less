@@ -34,20 +34,31 @@
 .swiper-slide {
   width: 100%;
   position: relative;
+  font-size: 0;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+  }
+
 
   h2 {
+    margin: 0;
     text-align: center;
     line-height: 55px;
-    padding-top: 180px;
     color: #fff;
-    margin-bottom: 50px;
-    width: 75%;
-    margin: 0 auto;
     font-family: @brandon;
     font-weight: 600;
     font-size: 40px;
     z-index: 1;
     position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    padding: 0 12.5%;
 
     a.learn-more {
       color: @goatbrown;
