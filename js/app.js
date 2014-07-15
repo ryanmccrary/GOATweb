@@ -12,4 +12,6 @@ $(document).ready(function() {
   $('.box h4 span').fitText(1);
   $(".number").fitText(.2);
   $('.fittext').fitText(1, { maxFontSize: '40px'});
+
+  $('.slide-1').backstretch('../img/slide-1.jpg');
 });
