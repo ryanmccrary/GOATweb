@@ -14,4 +14,6 @@ $(document).ready(function() {
   $('.fittext').fitText(1.4, { maxFontSize: '40px'});
 
   $('.slide-1').backstretch('../img/slide-1.jpg');
+  $('.box.tribe').backstretch('../img/home-tribe.jpg');
+  $('.box.blog').backstretch('../img/home-blog.jpg');
 });
