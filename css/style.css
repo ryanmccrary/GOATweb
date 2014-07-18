@@ -104,7 +104,7 @@
   }
 }
 .row-2 {
-  height: 300px;
+  height: 390px;
   font-size: 0;
 }
 .row-2 .box {
@@ -210,6 +210,59 @@
   .row-2 .box.donate {
     width: 100%;
     float: left;
+  }
+}
+.row-3 {
+  height: 300px;
+  font-size: 0;
+}
+.row-3 .box {
+  display: inline-block;
+}
+.row-3 .box.mtngoat {
+  width: 50%;
+  height: 100%;
+  background-color: #fed389;
+  font-family: 'din-condensed-web', sans-serif;
+  font-size: 24px;
+  padding: 1.5em;
+  vertical-align: top;
+}
+.row-3 .box.mtngoat h4 {
+  color: #ef5123;
+  text-transform: uppercase;
+  display: block;
+  font-family: "brandon-grotesque", sans-serif;
+  letter-spacing: 2px;
+  margin: 0 0 .5em 0;
+  font-weight: 700;
+}
+.row-3 .box.store {
+  width: 50%;
+  height: 100%;
+  background-color: #654738;
+  text-align: center;
+  margin: auto 0;
+}
+.row-3 .box.store h4 {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 60px;
+  font-family: 'din-condensed-web', sans-serif;
+  font-weight: 600;
+}
+@media (max-width: 975px) {
+  .row-3:before,
+  .row-3:after {
+    content: " ";
+    display: table;
+  }
+  .row-3:after {
+    clear: both;
+  }
+  .row-3 .box.mtngoat,
+  .row-3 .box.store {
+    width: 100%;
   }
 }
 .swiper-container {
