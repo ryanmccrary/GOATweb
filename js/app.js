@@ -16,4 +16,5 @@ $(document).ready(function() {
   $('.slide-1').backstretch('../img/slide-1.jpg');
   $('.box.tribe').backstretch('../img/home-tribe.jpg');
   $('.box.blog').backstretch('../img/home-blog.jpg');
+  $('.box.store').backstretch('../img/store.png');
 });
