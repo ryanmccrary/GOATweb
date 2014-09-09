@@ -11,8 +11,23 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="js/jquery.zrssfeed.min.js"></script>
   <script type="text/javascript" src="https://use.typekit.net/cje3rie.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+    $('#rss').rssfeed('http://blog.goattrips.org/feed/', {limit: 2, date: false, header: false}, function (e) {
+
+
+        $('h4 a', e).each(function (i) {
+            var title = $(this).text();
+            if (title.length > 14) $(this).text(title.substring(0, 14) + '...');
+
+        });
+    });
+});
+
+  </script>
 </head>
 <body>
 
@@ -94,7 +109,7 @@
         </a>
       </div>
       <div class="box blog">
-        Three
+        <div id="rss"></div>
       </div>
     </div>
     <div class="row-fluid row-3">
