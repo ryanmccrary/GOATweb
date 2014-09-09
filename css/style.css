@@ -202,6 +202,9 @@
 .row-2 .box.donate p {
   padding: 0 10%;
 }
+.row-2 .box.blog {
+  text-align: left;
+}
 .row-2 .box.blog:after {
   content: '';
   display: block;
@@ -212,6 +215,36 @@
   z-index: 0;
   top: 0;
   left: 0;
+}
+.row-2 .box.blog > a {
+  padding: 30px 40px;
+  min-height: 100%;
+}
+.row-2 .box.blog h4 {
+  font-family: "brandon-grotesque", sans-serif;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.row-2 .box.blog .rssFeed ul {
+  padding-left: 0;
+  margin-top: 30px;
+}
+.row-2 .box.blog .rssFeed li {
+  padding-left: 40px;
+  overflow: visible;
+  background: url('../img/blog-icon.svg') no-repeat 3px 5px;
+  background-size: 23px 28px;
+  padding-bottom: 10px;
+}
+.row-2 .box.blog .rssFeed h4 {
+  font-size: 24px;
+}
+.row-2 .box.blog .rssFeed p {
+  font-size: 18px;
+  font-family: 'din-condensed-web', sans-serif;
+  letter-spacing: .2px;
 }
 @media (max-width: 975px) {
   .row-2:before,
