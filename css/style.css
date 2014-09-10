@@ -108,20 +108,22 @@
   margin-right: -0.25em;
   /* Adjusts for spacing */
 }
-.row-2 .box a,
-.row-3 .box a {
+.row-2 .box > a,
+.row-3 .box > a,
+.row-2 .box .wrapper,
+.row-3 .box .wrapper {
   display: inline-block;
   vertical-align: middle;
   z-index: 1;
   width: 100%;
   color: #fff;
 }
-.row-2 .box a:hover,
-.row-3 .box a:hover {
+.row-2 .box > a:hover,
+.row-3 .box > a:hover {
   text-decoration: none;
 }
-.row-2 .box a:after,
-.row-3 .box a:after {
+.row-2 .box > a:after,
+.row-3 .box > a:after {
   content: '';
   height: 100%;
   display: block;
@@ -130,7 +132,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 0;
 }
 .row-1 {
   height: 530px;
@@ -212,13 +214,11 @@
   width: 100%;
   height: 100%;
   background: rgba(255, 244, 227, 0.25);
-  z-index: 0;
-  top: 0;
-  left: 0;
 }
-.row-2 .box.blog > a {
+.row-2 .box.blog .wrapper {
   padding: 30px 40px;
   min-height: 100%;
+  z-index: 1;
 }
 .row-2 .box.blog h4 {
   font-family: "brandon-grotesque", sans-serif;
@@ -245,6 +245,12 @@
   font-size: 18px;
   font-family: 'din-condensed-web', sans-serif;
   letter-spacing: .2px;
+}
+.row-2 .box.blog .rssFeed a {
+  color: #fff;
+}
+.row-2 .box.blog .rssFeed a:hover {
+  text-decoration: none;
 }
 @media (max-width: 975px) {
   .row-2:before,
