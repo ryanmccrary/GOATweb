@@ -12,6 +12,7 @@
 // imports
 @import '../bower_components/swiper/dist/idangerous.swiper.css';
 @import 'nav.less';
+@import 'footer.less';
 
 
 .container-fluid {
@@ -85,7 +86,8 @@
 }
 
 .row-2 {
-  height: 390px;
+  height: auto;
+  min-height: 390px;
   font-size: 0;
 
   .box {
@@ -269,7 +271,8 @@
 }
 
 .row-3 {
-  height: 390px;
+  height: auto;
+  min-height: 390px;
   font-size: 0;
   background-color: @goatbrown;
 
@@ -527,12 +530,5 @@
     .box {
       width: 100%;
     }
-  }
-}
-
-.row-2,
-.row-3 {
-  @media(max-width: 450px) {
-    height: auto;
   }
 }
