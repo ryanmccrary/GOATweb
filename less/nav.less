@@ -6,19 +6,29 @@
   padding: 0 40px;
 
   .navbar-brand {
+    font-size: 70px;
+    font-family: @brandon;
+
     &, &:hover {
-      font-family: @brandon;
-      font-size: 70px;
       font-weight: 800;
       color: @goatred;
       display: inline-block;
       float: none;
+    }
 
-      @media (max-width: 1050px) {
-        margin-top: 15px;
-      }
+    @media (max-width: 1050px) {
+      margin-top: 15px;
     }
   }
+
+  .navbar-toggle {
+    margin-top: 23px;
+
+    @media (max-width: 450px) {
+      margin-top: 15px;
+    }
+  }
+
   .tagline {
     font-family: @din;
     color: @goatteal;
@@ -33,11 +43,19 @@
     }
   }
 
+
+  @media (max-width: 768px) {
+    .navbar-collapse {
+      padding: 0;
+    }
+  }
+
   .navbar-nav {
     font-family: @din;
     text-transform: uppercase;
     font-size: 22px;
-    margin-top: 17px;
+    margin: 17px 0 0 0;
+    line-height: 52px;
 
     > li {
       float: none;
@@ -77,15 +95,40 @@
       padding: 0;
       width: 100%;
       margin-top: 0;
+      font-size: 0;
 
       > li {
-        width: 16%;
+        width: 16.66%;
         text-align: center;
+        font-size: 22px;
+        height: 100%;
+
+        @media (max-width: 650px) {
+          font-size: 18px;
+
+          > a {
+            line-height: 30px;
+            margin-bottom: -12px;
+          }
+        }
 
         > a {
           padding: 10px 0;
+          line-height: 40px;
         }
       }
+    }
+  }
+
+
+  @media (max-width: 450px) {
+    .navbar-brand {
+      font-size: 45px;
+      margin-top: 8px;
+    }
+
+    .tagline {
+      font-size: 18px;
     }
   }
 }

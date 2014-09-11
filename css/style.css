@@ -6,18 +6,27 @@
   top: 0;
   padding: 0 40px;
 }
+.navbar .navbar-brand {
+  font-size: 70px;
+  font-family: "brandon-grotesque", sans-serif;
+}
 .navbar .navbar-brand,
 .navbar .navbar-brand:hover {
-  font-family: "brandon-grotesque", sans-serif;
-  font-size: 70px;
   font-weight: 800;
   color: #ef5123;
   display: inline-block;
   float: none;
 }
 @media (max-width: 1050px) {
-  .navbar .navbar-brand,
-  .navbar .navbar-brand:hover {
+  .navbar .navbar-brand {
+    margin-top: 15px;
+  }
+}
+.navbar .navbar-toggle {
+  margin-top: 23px;
+}
+@media (max-width: 450px) {
+  .navbar .navbar-toggle {
     margin-top: 15px;
   }
 }
@@ -33,11 +42,17 @@
   white-space: nowrap;
   display: block;
 }
+@media (max-width: 768px) {
+  .navbar .navbar-collapse {
+    padding: 0;
+  }
+}
 .navbar .navbar-nav {
   font-family: 'din-condensed-web', sans-serif;
   text-transform: uppercase;
   font-size: 22px;
-  margin-top: 17px;
+  margin: 17px 0 0 0;
+  line-height: 52px;
 }
 .navbar .navbar-nav > li {
   float: none;
@@ -69,13 +84,35 @@
     padding: 0;
     width: 100%;
     margin-top: 0;
+    font-size: 0;
   }
   .navbar .navbar-nav > li {
-    width: 16%;
+    width: 16.66%;
     text-align: center;
+    font-size: 22px;
+    height: 100%;
   }
   .navbar .navbar-nav > li > a {
     padding: 10px 0;
+    line-height: 40px;
+  }
+}
+@media (max-width: 975px) and (max-width: 650px) {
+  .navbar .navbar-nav > li {
+    font-size: 18px;
+  }
+  .navbar .navbar-nav > li > a {
+    line-height: 30px;
+    margin-bottom: -12px;
+  }
+}
+@media (max-width: 450px) {
+  .navbar .navbar-brand {
+    font-size: 45px;
+    margin-top: 8px;
+  }
+  .navbar .tagline {
+    font-size: 18px;
   }
 }
 .container-fluid {
@@ -92,6 +129,11 @@
 @media (max-width: 767px) {
   .container-fluid.main {
     padding-top: 80px;
+  }
+}
+@media (max-width: 450px) {
+  .container-fluid.main {
+    padding-top: 64px;
   }
 }
 .row-2 .box,
@@ -214,6 +256,9 @@
   width: 100%;
   height: 100%;
   background: rgba(255, 244, 227, 0.25);
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 .row-2 .box.blog .wrapper {
   padding: 30px 40px;
@@ -229,14 +274,22 @@
 }
 .row-2 .box.blog .rssFeed ul {
   padding-left: 0;
-  margin-top: 30px;
+  margin: 30px 0 0;
 }
 .row-2 .box.blog .rssFeed li {
   padding-left: 40px;
   overflow: visible;
   background: url('../img/blog-icon.svg') no-repeat 3px 5px;
   background-size: 23px 28px;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.row-2 .box.blog .rssFeed li:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .row-2 .box.blog .rssFeed li {
+    min-height: 50px;
+  }
 }
 .row-2 .box.blog .rssFeed h4 {
   font-size: 24px;
@@ -245,6 +298,16 @@
   font-size: 18px;
   font-family: 'din-condensed-web', sans-serif;
   letter-spacing: .2px;
+}
+@media (max-width: 768px) {
+  .row-2 .box.blog .rssFeed p {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
+  .row-2 .box.blog .rssFeed p {
+    display: block;
+  }
 }
 .row-2 .box.blog .rssFeed a {
   color: #fff;
@@ -268,6 +331,12 @@
   .row-2 .box.donate {
     width: 100%;
     float: left;
+  }
+}
+@media (max-width: 450px) {
+  .row-2 .box.blog,
+  .row-2 .box.tribe {
+    width: 100%;
   }
 }
 .row-3 {
@@ -366,7 +435,7 @@
 .swiper-slide h2 {
   margin: 0;
   text-align: center;
-  line-height: 55px;
+  line-height: 1.25em;
   color: #fff;
   font-family: "brandon-grotesque", sans-serif;
   letter-spacing: 2px;
@@ -390,23 +459,15 @@
   font-size: 21px;
   text-transform: uppercase;
   background: #fff;
-  padding: 8px 5px 8px 12px;
+  padding: 2px 15px 0;
   position: relative;
   white-space: nowrap;
+  margin-top: 15px;
+  display: inline-block;
+  border-radius: 4px;
 }
 .swiper-slide h2 a.learn-more:hover {
   text-decoration: none;
-}
-.swiper-slide h2 a.learn-more:after {
-  position: absolute;
-  content: '';
-  height: 100%;
-  border: 20px solid #fff;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
-  border-right-color: transparent;
-  right: -40px;
-  top: 0;
 }
 .swiper-slide img {
   position: absolute;
@@ -503,5 +564,16 @@
     width: 50%;
     vertical-align: middle;
     height: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .boxes .box {
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .row-2,
+  .row-3 {
+    height: auto;
   }
 }
