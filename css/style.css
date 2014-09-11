@@ -293,6 +293,7 @@
 }
 .row-2 .box.tribe img {
   width: 55%;
+  max-height: 300px;
 }
 .row-2 .box.tribe h4 {
   color: #fff;
@@ -534,7 +535,7 @@
 .swiper-slide h2 a.learn-more {
   color: #654738;
   font-family: 'din-condensed-web', sans-serif;
-  font-size: 21px;
+  font-size: .75em;
   text-transform: uppercase;
   background: #fff;
   padding: 2px 15px 0;
