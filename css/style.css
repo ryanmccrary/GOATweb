@@ -1,6 +1,6 @@
 @import '../bower_components/swiper/dist/idangerous.swiper.css';
 .navbar {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
   border: none;
   position: fixed;
   top: 0;
