@@ -1,0 +1,167 @@
+
+.about-header {
+  position: relative;
+  padding-bottom: 20px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 253, 49, .15);
+  }
+
+  > .container {
+    height: 295px;
+
+    // allows vertical align
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-right: -0.28em; /* Adjusts for spacing */
+    }
+  }
+
+  h2 {
+    margin: 0;
+    line-height: 1.25em;
+    color: #fff;
+    font-family: @brandon;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 50px;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 775px;
+    text-shadow: 0 0 50px rgba(0,0,0,.4);
+  }
+}
+
+.anchors {
+  z-index: 1;
+  position: relative;
+  margin-top: -20px;
+
+  nav {
+    font-family: @brandon;
+
+    a {
+      display: inline-block;
+      color: #fff;
+      background: @goatteal;
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-left: -5px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:hover {
+        text-decoration: none;
+        background: darken(@goatteal, 10%);
+      }
+    }
+  }
+}
+
+.about-blurb {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.about-sub {
+  font-family: @din;
+  color: @goatteal;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.staff {
+  margin-right: 0;
+  font-size: 0;
+
+  .people {
+    min-height: 433px;
+    width: 33.33%;
+    margin-right: 0;
+    padding-right: 0;
+    position: relative;
+    display: inline-block;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+
+    .description {
+      display: none;
+      color: #fff;
+      font-family: @brandon;
+      font-size: 18px;
+      padding: 20px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+
+      @media (max-width: 767px) {
+        display: block;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: fade(@goatteal, 80%);
+        z-index: -1;
+        display: none;
+
+        @media (max-width: 767px) {
+          display: block;
+        }
+      }
+
+
+      h2 {
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+
+      h3 {
+        margin: 0 0 20px;
+      }
+
+      p {
+        line-height: 21px;
+      }
+    }
+
+    &:hover .description {
+      display: block;
+
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
+
+
+.financial {
+  background: @goatteal;
+
+}

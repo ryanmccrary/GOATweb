@@ -17,4 +17,9 @@ $(document).ready(function() {
   $('.box.tribe').backstretch('../img/home-tribe.jpg');
   $('.box.blog').backstretch('../img/home-blog.jpg');
   $('.box.store').backstretch('../img/store.png');
+
+  $('.about-header').backstretch('../img/about-head.jpg');
+  $('.ryan').backstretch('../img/staff-ryan.jpg');
+  $('.joey').backstretch('../img/staff-joey.jpg');
+  $('.cam').backstretch('../img/staff-cam.jpg');
 });

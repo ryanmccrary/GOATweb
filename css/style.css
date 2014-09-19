@@ -50,20 +50,28 @@
 .navbar .navbar-nav {
   font-family: 'din-condensed-web', sans-serif;
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 0;
   margin: 17px 0 0 0;
   line-height: 52px;
 }
+.navbar .navbar-nav:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */
+}
 .navbar .navbar-nav > li {
   float: none;
+  font-size: 22px;
   display: inline-block;
   vertical-align: middle;
 }
 .navbar .navbar-nav > li a {
   color: #654738;
   border-bottom: 0;
-  padding: 3px;
-  margin: 0 18px;
+  padding: 3px 18px;
 }
 .navbar .navbar-nav > li a:hover {
   color: #ffffff;
@@ -193,6 +201,151 @@
 .footer .instagram img {
   width: 40px;
 }
+.about-header {
+  position: relative;
+  padding-bottom: 20px;
+}
+.about-header:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 253, 49, 0.15);
+}
+.about-header > .container {
+  height: 295px;
+}
+.about-header > .container:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.28em;
+  /* Adjusts for spacing */
+}
+.about-header h2 {
+  margin: 0;
+  line-height: 1.25em;
+  color: #fff;
+  font-family: "brandon-grotesque", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 50px;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 775px;
+  text-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+}
+.anchors {
+  z-index: 1;
+  position: relative;
+  margin-top: -20px;
+}
+.anchors nav {
+  font-family: "brandon-grotesque", sans-serif;
+}
+.anchors nav a {
+  display: inline-block;
+  color: #fff;
+  background: #19adac;
+  padding: 10px 20px;
+  font-size: 18px;
+  margin-left: -5px;
+}
+.anchors nav a:first-child {
+  margin-left: 0;
+}
+.anchors nav a:hover {
+  text-decoration: none;
+  background: #138080;
+}
+.about-blurb {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.about-sub {
+  font-family: 'din-condensed-web', sans-serif;
+  color: #19adac;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.staff {
+  margin-right: 0;
+  font-size: 0;
+}
+.staff .people {
+  min-height: 433px;
+  width: 33.33%;
+  margin-right: 0;
+  padding-right: 0;
+  position: relative;
+  display: inline-block;
+}
+@media (max-width: 767px) {
+  .staff .people {
+    width: 100%;
+  }
+}
+.staff .people .description {
+  display: none;
+  color: #fff;
+  font-family: "brandon-grotesque", sans-serif;
+  font-size: 18px;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+@media (max-width: 767px) {
+  .staff .people .description {
+    display: block;
+  }
+}
+.staff .people .description:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(25, 173, 172, 0.8);
+  z-index: -1;
+  display: none;
+}
+@media (max-width: 767px) {
+  .staff .people .description:after {
+    display: block;
+  }
+}
+.staff .people .description h2 {
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.staff .people .description h3 {
+  margin: 0 0 20px;
+}
+.staff .people .description p {
+  line-height: 21px;
+}
+.staff .people:hover .description {
+  display: block;
+}
+.staff .people:hover .description:after {
+  display: block;
+}
+.financial {
+  background: #19adac;
+}
 .container-fluid {
   padding: 0;
 }
@@ -201,7 +354,7 @@
 }
 @media (max-width: 975px) {
   .container-fluid.main {
-    padding-top: 123px;
+    padding-top: 140px;
   }
 }
 @media (max-width: 767px) {
@@ -651,51 +804,4 @@
   .boxes .box {
     width: 100%;
   }
-}
-.about-header {
-  background: url('../img/about-head.jpg');
-  min-height: 295px;
-}
-.about-header h2 {
-  margin: 0;
-  line-height: 1.25em;
-  color: #fff;
-  font-family: "brandon-grotesque", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 600;
-  font-size: 50px;
-  z-index: 1;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  width: 100%;
-  padding: 12.5% 0;
-}
-.about-sub {
-  font-family: 'din-condensed-web', sans-serif;
-  color: #19adac;
-  font-size: 24px;
-  padding: 10.5% 0;
-}
-.staff {
-  margin-right: 0;
-}
-.staff div {
-  min-height: 433px;
-  width: 33.33%;
-  margin-right: 0;
-  padding-right: 0;
-}
-.staff div.ryan {
-  background: url('../img/staff-ryan.jpg');
-}
-.staff div.joey {
-  background: url('../img/staff-joey.jpg');
-}
-.staff div.cam {
-  background: url('../img/staff-cam.jpg');
-}
-.financial {
-  background: #19adac;
 }

@@ -53,20 +53,29 @@
   .navbar-nav {
     font-family: @din;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 0;
     margin: 17px 0 0 0;
     line-height: 52px;
 
+    // allows vertical align
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-right: -0.25em; /* Adjusts for spacing */
+    }
+
     > li {
       float: none;
+      font-size: 22px;
       display: inline-block;
       vertical-align: middle;
 
       a {
         color: @goatbrown;
         border-bottom: 0;
-        padding: 3px;
-        margin: 0 18px;
+        padding: 3px 18px;
 
         &:hover {
           color: #ffffff;
